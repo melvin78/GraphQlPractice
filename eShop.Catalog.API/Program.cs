@@ -12,13 +12,8 @@ var builder = WebApplication.CreateBuilder(args);
 
 builder.Services
     .AddGraphQLServer()
-    .AddQueryType<Query>()
-    .AddType<ProductFilterInputType>()
-    .ModifyRequestOptions(e =>
-    {
-        e.IncludeExceptionDetails = true;
-    })
-    .AddType<ProductSortInputType>()
+    .AddCatalogTypes()
+    .AddShippingType()
     .AddGraphQLConventions();
 
 builder.Services

@@ -8,6 +8,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AnnotationBased", "Annotati
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SchemaFirst", "SchemaFirst\SchemaFirst.csproj", "{027291DA-9609-49B5-833A-16943F6A0322}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "eShop.Shipping.Types", "eShop.Shipping.Types\eShop.Shipping.Types.csproj", "{EF92A509-1390-4C1F-A564-ABD5F0376CFE}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -30,5 +32,9 @@ Global
 		{027291DA-9609-49B5-833A-16943F6A0322}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{027291DA-9609-49B5-833A-16943F6A0322}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{027291DA-9609-49B5-833A-16943F6A0322}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EF92A509-1390-4C1F-A564-ABD5F0376CFE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EF92A509-1390-4C1F-A564-ABD5F0376CFE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EF92A509-1390-4C1F-A564-ABD5F0376CFE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EF92A509-1390-4C1F-A564-ABD5F0376CFE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
