@@ -1,6 +1,6 @@
 using HotChocolate.Data.Filters;
 
-namespace eShop.Catalog.API.Filtering;
+namespace eShop.Catalog.API.Types.Filtering;
 
 public sealed class DefaultStringOperationFilterInputType : StringOperationFilterInputType
 {
