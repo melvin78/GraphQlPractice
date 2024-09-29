@@ -5,7 +5,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace eShop.Catalog.API.Services;
 
-public sealed class ProductTypeService(CatalogContext context)
+public sealed class ProductTypeService(CatalogContext context, IProductTypeByIdDataLoader productTypeById, IProductTypeByNameDataLoader productTypeByName)
 {
     public async Task<Page<ProductType>> GetProductsAsync(PagingArguments pagingArguments, CancellationToken cancellationToken = default)
     {
@@ -17,6 +17,11 @@ public sealed class ProductTypeService(CatalogContext context)
 
     public async Task<ProductType?> GetProductTypeByIdAsync(int id, CancellationToken cancellationToken = default)
     {
-        return await context.ProductTypes.FirstOrDefaultAsync(t => t.Id == id, cancellationToken);
+        return await productTypeById.LoadAsync(id, cancellationToken);
+    }
+    
+    public async Task<ProductType?> GetProductTypeByNameAsync(string name, CancellationToken cancellationToken = default)
+    {
+        return await productTypeByName.LoadAsync(name, cancellationToken);
     }
 }
